@@ -1,0 +1,18 @@
+import java.util.function.*;
+class Main
+{
+  public static void main(String ar[])
+  { 
+    Predicate<Integer> p=(a)->
+    {
+      for(int i=2;i<=Math.sqrt(a);i++)
+      {
+        if(a%i==0)return false;
+      }
+      return true;
+    };
+    
+    if(p.test(10))System.out.println("Number is Prime");
+    else System.out.println("Number is not prime");
+  }
+}
